@@ -16,7 +16,7 @@ from sqlalchemy import (
     Table,
 )
 from sqlalchemy.orm import relationship
-from sqlalchemy.dialects.postgresql import UUID, ARRAY
+from sqlalchemy.dialects.postgresql import UUID, ARRAY, JSONB
 
 # ---------------------------------------------------------------------------
 # Association tables
@@ -116,9 +116,16 @@ class Business(Base):
         server_default=text("gen_random_uuid()"),
     )
 
+    name = Column(String, nullable=False)
+    phone = Column(String, nullable=True)
+    email = Column(String, nullable=True)
+    website = Column(String, nullable=True)
+    social_media = Column(JSONB, nullable=True)
+    
     address_id = Column(UUID(as_uuid=True), ForeignKey("addresses.id"), nullable=True)
 
     description = Column(Text, nullable=True)
+    logo = Column(String, nullable=True)
     images = Column(ARRAY(String), nullable=True)
 
     created_at = Column(

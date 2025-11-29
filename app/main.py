@@ -1,8 +1,11 @@
 from typing import Union
-from fastapi import FastAPI, Depends
+
+from fastapi import Depends, FastAPI
 from sqlalchemy.orm import Session
-from .database import engine, get_db
+
 from . import models
+from .database import engine, get_db
+from .routers.business import router as business_router
 
 app = FastAPI()
 
@@ -20,3 +23,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 @app.get("/users")
 def get_users(db: Session = Depends(get_db)):
     return db.query(models.User).all()
+
+# ---------------------------------------------------------------------------
+# include routers
+app.include_router(business_router)

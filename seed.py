@@ -52,12 +52,30 @@ def seed():
         # Business
         # ------------------------------------------------------------------
         business = Business(
-            address=addr_business,
-            description="A cosy beauty studio specialising in brows, lashes, and skin treatments.",
+            name="Happy Nails",
+            phone="+61 400 123 456",
+            email="hello@happynails.com",
+            website="https://happynails.com",
+
+            logo="business-images/happynails_logo.png",
+
+            description="A cosy beauty studio specialising in modern nail treatments.",
+
             images=[
-                "business-images/vanityclub_front.jpg",
-                "business-images/vanityclub_room.jpg",
+                "business-images/happynails_front.jpg",
+                "business-images/happynails_room.jpg",
             ],
+
+            social_media={
+                "instagram": "https://instagram.com/happynails",
+                "facebook": "https://facebook.com/happynails",
+                "tiktok": "https://tiktok.com/@happynails",
+                "youtube": None,
+                "twitter": None,
+                "linkedin": None,
+            },
+
+            address=addr_business,
         )
         session.add(business)
 
