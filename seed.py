@@ -70,9 +70,6 @@ def seed():
                 "instagram": "https://instagram.com/happynails",
                 "facebook": "https://facebook.com/happynails",
                 "tiktok": "https://tiktok.com/@happynails",
-                "youtube": None,
-                "twitter": None,
-                "linkedin": None,
             },
 
             address=addr_business,
