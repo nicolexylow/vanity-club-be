@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.eggs/
+*.sqlite3
+
+# Virtual environment
+venv/
+.env/
+.env.local
+.env.production
+.env.development
+
+# IDEs
+.vscode/
+.idea/
+
+# Bytecode caches
+**/__pycache__/
+
+# Logs
+*.log
+
+# Alembic migration cache
+alembic/versions/*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Pytest / Coverage
+htmlcov/
+.pytest_cache/
+.coverage
+.pytest_cache/
+.cache/
+
+# dotenv files
+.env
+.env.*
+!example.env
+
+# Local overrides
+local_settings.py
+
+# MyPy
+.mypy_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg
+*.egg-info/
